@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Diagnostico de enfermedades oculares</title>
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+	<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+	<link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+	<script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+</head>
+<body>
+	<!-- PANTALLA DE INICIO / PRESENTACION  ID=INICIO-->
+	<div class="inicio" id="inicio">
+		<h1 class="titulo-inicio">DIAGNÓSTICO DE ENFERMEDADES OCULARES</h1>
+		<div class="integrantes">
+			<p>Proyecto realizado por:</p>
+			<p>Jose Armando Hernadez flores</p>
+			<br>
+			<p>Oswaldo Moises Carbajal Resendiz</p>
+		</div>
+		<div class="botones">
+				<button class="button button--outline" onclick="mostrar_diagnostico_general()">Diagnóstico general</button>
+				<button class="button button--outline" onclick="mostrar_diagnostico_especifico()">Diagnóstico específico</button>
+		</div>
+	</div>
+
+	<!-- DIAGNOSTICO GENERAL ID=DIAGNOSTICO-GENERAL-->
+	<div class="diagnostico-general-oculto" id="diagnostico-general">
+	<button class="button boton-menu derecha" onclick="general_a_principal()">MENÚ PRINCIPAL</button>
+	<h1 class="titulo">DIAGNÓSTICO GENERAL</h1>
+	<div id="contenedor">
+		<p>Con forme a los sintomas.</p>
+		<p>Escoge la intensidad del síntoma en una escala del 1 al 10.</p>
+		<br>
+		<div class="contenedor-sintomas" id="contenedor-sintomas"></div>
+		<button class="button button--outline derecha" onclick="evaluar_general()">Diagnosticar</button>
+	</div>
+	</div>
+
+	<!-- DIAGNÓSTICO ESPECÍFICO -->
+	<div class="diagnostico-especifico-oculto" id="diagnostico-especifico">
+	<button class="button boton-menu derecha" onclick="especifico_a_principal()">MENÚ PRINCIPAL</button>
+	<h1 class="titulo">DIAGNÓSTICO ESPECÍFICO</h1>
+	<div id="contenedor">
+		<p>Escoja las enfermedes oculares que desea evaluar:</p>
+		<br>
+		<ul class="list" id="contenedor-enfermedades"></ul>
+		<br><br>
+		<p>Con forme a los sintomas.</p>
+		<p>Escoge la intensidad del síntoma en una escala del 1 al 10.</p>
+		<br>
+		<div class="contenedor-sintomas"	id="contenedor-sintomas2"></div>
+		<button class="button button--outline derecha" onclick="evaluar_especifico()">Diagnosticar</button>
+	</div>
+	</div>
+
+	<!-- RESULTADOS DE DIAGNOSTICO -->
+	<div class="resultados-oculto" id="resultados">
+		<div class="alert-dialog-mask"></div>
+		<div class="alert-dialog">
+			<div class="alert-dialog-container">
+				<div class="alert-dialog-title"><h2>Resultados del diagnóstico</h2></div>
+				<div class="alert-dialog-content" id="info-resultado">Tu diagnostico es</div>
+				<div class="alert-dialog-footer">
+					<button class="alert-dialog-button alert-dialog-button--primal" onclick="ocultar_resultados()">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ALERTA -->
+	<div class="toast-oculto" id="toast">
+		<div class="toast__message"><b>ADVERTENCIA: </b>Message Message Message Message Message Message</div>
+		<!-- <button class="toast__button">ACTION</button> -->
+	</div>
+
+</body>
+<script type="text/javascript" src="sintomas.js"></script>
+<script type="text/javascript" src="enfermedades.js"></script>
+<script type="text/javascript" src="main.js" onload="start()"></script>
+</html>

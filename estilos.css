@@ -1,0 +1,216 @@
+:root{
+	--color-primario: #FFF;
+	--color-titulo:rgba(3, 166, 120, 0.7);
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(fonts/Avenir.ttc);
+}
+
+@font-face {
+    font-family: SF-Pro;
+    src: url(fonts/SF-Pro.otf);
+}
+
+*{
+	border:none;
+	padding: 0px;
+	margin: 0px;
+	outline: none;
+	box-sizing: border-box;
+	font-family: 'Avenir', sans-serif;
+}
+
+body, html{
+	height: 100%;
+	width: 100%;
+	background-color: var(--color-primario);
+	overflow: auto !important;
+}
+
+.inicio-oculto{
+	visibility: hidden;
+    opacity: 0;
+	transition: all 0.33s;
+	display: none;
+}
+
+.inicio{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	padding: 10%;
+	background-color: var(--color-primario);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	justify-content: space-evenly;
+	z-index: 2;
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;		
+}
+
+.titulo{
+	/* font-family: 'SF-Pro', sans-serif; */
+	font-size: 50px;
+	color:rgba(0,0,0,0.3);
+	margin: 4% 4%; 
+}
+
+.titulo-inicio{
+	/* font-family: 'SF-Pro', sans-serif; */
+	font-weight: bolder;
+	font-size: 50px;
+	color: var(--color-titulo);
+}
+
+.nombre-sintoma{
+	font-family: 'SF-Pro', sans-serif;
+	font-size: 18px;
+}
+
+.valor-sintoma{
+	font-family: 'SF-Pro', sans-serif;
+	font-size: 14px;
+}
+
+#contenedor{
+	margin: 10px 4%;
+	padding: 3.5vw 5vw;
+	width: 92%;
+	background-color: white;
+	border-radius: 7px;
+	box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.4);
+	float: left;
+}
+
+.contenedor-sintomas{
+	width: 100%;
+	float: left;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-evenly;
+	margin-bottom: 30px;
+}
+
+.sintomas{
+	flex-grow: 1;
+	margin: 10px;
+	padding: 15px;
+	border-style: solid;
+	border-radius: 7px;
+	/* width: 300px; */
+	border-width: 1px;
+	border-color: rgba(0,0,0,0.1);
+}
+	.range{
+		width: 100% !important;
+	}
+	.izquierda{
+		float: left;
+	}
+	.derecha{
+		float: right;
+	}
+	.notification{
+		margin: 8px 0px !important;
+		/* background-color: !important; */
+	}
+
+.toast-oculto{
+	visibility: hidden;
+	opacity: 0;
+	transition: all 2.33s;
+	/* -moz-transition: all 2.33s;
+	-ms-transition: all 2.33s;
+	-o-transition: all 2.33s;
+	-webkit-transition: all 2.33s; */
+}
+
+.toast{
+	position: fixed !important;
+	background-color: rgba(240,52,52, .8) !important;
+	visibility: visible;
+	opacity: 1;
+	/* -webkit-transition: all 2.33s;
+	transition: all 2.33s;
+	-moz-transition: all 2.33s;
+	-ms-transition: all 2.33s;
+	-o-transition: all 2.33s;
+	-webkit-transition: all 2.33s; */
+}
+
+.boton-menu{
+	right: 4%;
+	/* position: fixed !important; */
+	z-index: 3;
+}
+
+.diagnostico-general-oculto{
+	visibility: hidden;
+    opacity: 0;
+	transition: all 0.33s;
+	display: none;
+}
+
+.diagnostico-general{
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+	display: block;
+	transition: all 0.33s;
+}
+
+.diagnostico-especifico-oculto{
+	visibility: hidden;
+    opacity: 0;
+	transition: all 0.33s;
+	display: none;
+}
+
+.diagnostico-especifico{
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+	display: block;
+}
+
+.alert-dialog-mask{
+	position: fixed !important;
+	z-index: 4;
+}
+.alert-dialog{
+	position: fixed !important;
+	z-index: 4;
+	height: 80% !important;
+	width: 80% !important;
+}
+.alert-dialog-content{
+	text-align: left !important;
+	margin: 15px;
+}
+.alert-dialog-container{
+	overflow-y: scroll !important;
+}
+.alert-dialog-footer{
+	position: fixed;
+	bottom: 0;
+}
+.resultados-oculto{
+	overflow-y: scroll;
+	visibility: hidden;
+    opacity: 0;
+	transition: all 0.33s;
+	display: none;
+}
+.resultados{
+	overflow-y: scroll;
+	visibility: visible;
+	opacity: 1;
+	transition-delay: 0s;
+	display: block;
+}
